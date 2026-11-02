@@ -1,7 +1,7 @@
 {
   "name": "fluxcut",
   "description": "Makes a product video from a goal. Installs Fluxcut's MCP server, the maker skill, and the long-wait timeout. Your agent drives the gates; you approve them and you publish.",
-  "version": "1.40.2",
+  "version": "1.40.3",
   "author": {
     "name": "Fluxcut",
     "url": "https://www.fluxcut.dev"

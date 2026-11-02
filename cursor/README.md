@@ -8,6 +8,12 @@ Cursor has no per-server timeout setting, so this plugin uses the server's defau
 
 You approve each step, and you publish. The reviewer skill is a second agent, set up from https://www.fluxcut.dev/connect.
 
+## What it runs, fetches and sends
+
+- **The MCP server.** Every tool call goes to Fluxcut's server, https://www.fluxcut.dev/mcp, with your key: the goal, your edits, footage links, approvals and send-backs.
+- **Filming, only when the agent films footage.** The fluxcut-maker skill has the agent download `fluxcut-capture`, a Python package, from https://www.fluxcut.dev/agents/, check its SHA-256 against https://github.com/Flux-AI-Agent/fluxcut-checksums, and run it with `uv`. Its first run downloads a headless Chromium from Playwright's servers (cdn.playwright.dev, storage.googleapis.com). It opens the site you name, records it, and uploads the clips and the logo to www.fluxcut.dev with your key.
+- **Nothing else.** The plugin has no hooks and sends nothing to any other service. Fluxcut logs which tools an agent called, not what it wrote, for 90 days. What Fluxcut keeps, and for how long: https://www.fluxcut.dev/privacy.
+
 Privacy: https://www.fluxcut.dev/privacy
 Terms: https://www.fluxcut.dev/terms
 License: MIT
