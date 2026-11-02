@@ -2,7 +2,7 @@
   "name": "fluxcut",
   "displayName": "Fluxcut",
   "description": "Makes a product video from a goal. Installs Fluxcut's MCP server, the maker skill, and the long-wait timeout. Your agent drives the gates; you approve them and you publish.",
-  "version": "1.40.0",
+  "version": "1.40.1",
   "author": {
     "name": "Fluxcut",
     "url": "https://www.fluxcut.dev"
@@ -21,6 +21,15 @@
     "promo",
     "mcp"
   ],
+  "userConfig": {
+    "fluxcut_key": {
+      "type": "string",
+      "title": "Fluxcut key",
+      "description": "Your maker key from https://www.fluxcut.dev/settings/keys (fcx_…). Kept in your system's secure storage.",
+      "required": true,
+      "sensitive": true
+    }
+  },
   "skills": "./skills/",
   "mcpServers": {
     "fluxcut": {
@@ -28,7 +37,7 @@
       "url": "https://www.fluxcut.dev/mcp?wait=240",
       "timeout": 300000,
       "headers": {
-        "Authorization": "Bearer ${FLUXCUT_KEY}"
+        "Authorization": "Bearer ${user_config.fluxcut_key}"
       }
     }
   }

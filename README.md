@@ -16,15 +16,16 @@ Make a maker key at [Settings → Agent keys](https://www.fluxcut.dev/settings/k
 export FLUXCUT_KEY=fcx_…
 ```
 
-The plugins store the name `FLUXCUT_KEY`. They never store the key. To keep it, add that line to your shell profile.
+The Claude Code plugin keeps the key in your system's secure storage (the macOS Keychain, for example). The Codex and Cursor plugins store the name `FLUXCUT_KEY`, never the key, and read it from the environment, so for them add that line to your shell profile. `fluxcut-capture`, the filming tool the skill uses, reads `FLUXCUT_KEY` too.
 
 ## Claude Code
 
 ```sh
 claude plugin install fluxcut --marketplace Flux-AI-Agent/fluxcut-plugin
+printf '{"fluxcut_key":"%s"}' "$FLUXCUT_KEY" | claude plugin configure fluxcut@fluxcut --values-stdin
 ```
 
-That command needs Claude Code 2.1.292 or later. On an older version, add the marketplace first: `claude plugin marketplace add Flux-AI-Agent/fluxcut-plugin && claude plugin install fluxcut@fluxcut`. Start a new session, then ask: "Use the fluxcut-maker skill to make a promo for <your product>."
+The second line saves the key you exported into the plugin's settings. You can instead type it in Claude Code: `/plugin configure fluxcut@fluxcut`. The server loads once the key is set. The install command needs Claude Code 2.1.292 or later. On an older version, add the marketplace first: `claude plugin marketplace add Flux-AI-Agent/fluxcut-plugin && claude plugin install fluxcut@fluxcut`. Start a new session, then ask: "Use the fluxcut-maker skill to make a promo for <your product>."
 
 If you set Fluxcut up by hand before, `claude mcp remove fluxcut` so the plugin's server is the only one.
 

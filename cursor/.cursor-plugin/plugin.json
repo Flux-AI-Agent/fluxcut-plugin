@@ -2,7 +2,7 @@
   "name": "fluxcut",
   "displayName": "Fluxcut",
   "description": "Makes a product video from a goal. Installs Fluxcut's MCP server and the maker skill. Your agent drives the gates; you approve them and you publish.",
-  "version": "1.40.0",
+  "version": "1.40.1",
   "author": {
     "name": "Fluxcut",
     "url": "https://www.fluxcut.dev"
