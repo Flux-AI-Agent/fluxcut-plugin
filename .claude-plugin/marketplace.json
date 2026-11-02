@@ -1,0 +1,25 @@
+{
+  "name": "fluxcut",
+  "owner": {
+    "name": "Fluxcut",
+    "url": "https://www.fluxcut.dev"
+  },
+  "metadata": {
+    "description": "Fluxcut plugin for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "fluxcut",
+      "source": "./claude",
+      "description": "Makes a product video from a goal. Installs Fluxcut's MCP server, the maker skill, and the long-wait timeout.",
+      "category": "productivity",
+      "homepage": "https://www.fluxcut.dev/connect",
+      "author": {
+        "name": "Fluxcut",
+        "url": "https://www.fluxcut.dev"
+      },
+      "license": "MIT",
+      "keywords": ["fluxcut", "video", "product-demo", "promo", "mcp"]
+    }
+  ]
+}

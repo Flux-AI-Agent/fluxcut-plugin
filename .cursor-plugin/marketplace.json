@@ -1,0 +1,14 @@
+{
+  "name": "fluxcut",
+  "owner": {
+    "name": "Fluxcut",
+    "url": "https://www.fluxcut.dev"
+  },
+  "plugins": [
+    {
+      "name": "fluxcut",
+      "source": "./cursor",
+      "description": "Makes a product video from a goal. Installs Fluxcut's MCP server and the maker skill."
+    }
+  ]
+}

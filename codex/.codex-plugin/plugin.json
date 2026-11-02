@@ -1,0 +1,42 @@
+{
+  "name": "fluxcut",
+  "description": "Makes a product video from a goal. Installs Fluxcut's MCP server, the maker skill, and the long-wait timeout. Your agent drives the gates; you approve them and you publish.",
+  "version": "1.40.0",
+  "author": {
+    "name": "Fluxcut",
+    "url": "https://www.fluxcut.dev"
+  },
+  "homepage": "https://www.fluxcut.dev/connect",
+  "repository": "https://github.com/Flux-AI-Agent/fluxcut-plugin",
+  "license": "MIT",
+  "keywords": [
+    "fluxcut",
+    "video",
+    "product-demo",
+    "promo",
+    "mcp",
+    "codex"
+  ],
+  "mcpServers": "./.mcp.json",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Fluxcut",
+    "shortDescription": "Make a product video in Fluxcut from Codex",
+    "longDescription": "Installs Fluxcut's MCP server, the maker skill, and a 300 second tool timeout so each wait can hold up to 4 minutes. The agent writes, films, and drives the gates. You approve them, and you publish.",
+    "developerName": "Fluxcut",
+    "category": "Creativity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://www.fluxcut.dev",
+    "privacyPolicyURL": "https://www.fluxcut.dev/privacy",
+    "termsOfServiceURL": "https://www.fluxcut.dev/terms",
+    "defaultPrompt": [
+      "Use the fluxcut-maker skill. Make a promo for this product."
+    ],
+    "brandColor": "#5B21B6",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
+  }
+}

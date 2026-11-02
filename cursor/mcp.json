@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "fluxcut": {
+      "url": "https://www.fluxcut.dev/mcp",
+      "headers": {
+        "Authorization": "Bearer ${env:FLUXCUT_KEY}"
+      }
+    }
+  }
+}

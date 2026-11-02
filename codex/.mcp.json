@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "fluxcut": {
+      "type": "streamable-http",
+      "url": "https://www.fluxcut.dev/mcp?wait=240",
+      "bearer_token_env_var": "FLUXCUT_KEY",
+      "tool_timeout_sec": 300,
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "api_key",
+            "headerScheme": "bearer"
+          }
+        }
+      }
+    }
+  }
+}

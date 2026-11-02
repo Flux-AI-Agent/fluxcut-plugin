@@ -1,0 +1,20 @@
+{
+  "name": "fluxcut",
+  "interface": {
+    "displayName": "Fluxcut"
+  },
+  "plugins": [
+    {
+      "name": "fluxcut",
+      "source": {
+        "source": "local",
+        "path": "./codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Creativity"
+    }
+  ]
+}

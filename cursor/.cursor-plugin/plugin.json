@@ -1,0 +1,24 @@
+{
+  "name": "fluxcut",
+  "displayName": "Fluxcut",
+  "description": "Makes a product video from a goal. Installs Fluxcut's MCP server and the maker skill. Your agent drives the gates; you approve them and you publish.",
+  "version": "1.40.0",
+  "author": {
+    "name": "Fluxcut",
+    "url": "https://www.fluxcut.dev"
+  },
+  "homepage": "https://www.fluxcut.dev/connect",
+  "repository": "https://github.com/Flux-AI-Agent/fluxcut-plugin",
+  "license": "MIT",
+  "keywords": [
+    "fluxcut",
+    "video",
+    "product-demo",
+    "promo",
+    "mcp",
+    "cursor"
+  ],
+  "logo": "assets/icon.png",
+  "skills": "skills/",
+  "mcpServers": "mcp.json"
+}
