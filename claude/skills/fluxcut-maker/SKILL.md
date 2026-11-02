@@ -20,7 +20,7 @@ honestly by the `fluxcut-reviewer` rubric, never rubber-stamp your own work.
 This is one long session: keep calling `wait_for_gate` between gates, and do not end your turn until
 the final video waits for the person (`idle`) or an escalation stops the project.
 
-1. `create_project(goal, backend="real", mode=…)` — starts the first run. `mode="dual"` when a reviewer
+1. `create_project(goal, backend="real", mode=…, name="Acme 60-second promo")` — starts the first run; `name` is what the person's lists call it. `mode="dual"` when a reviewer
    agent will answer the gates, `mode="single"` when the person approves them; if you were not told,
    ask the person. `backend="fixture"` makes a free
    test video with placeholder voice, music and pictures; use it to try the loop. On a fixture project
@@ -49,7 +49,7 @@ the final video waits for the person (`idle`) or an escalation stops the project
 
 ## The goal (what the brief is built from)
 One paragraph of at most 2,000 characters: what the product is, for whom, the pain it removes, the
-length ("60 seconds"), and the shots to show. Use **real numbers you measured** (minutes saved, cost, count) — the brief may only use
+length ("60 seconds" unless the person asks for another), and the shots to show. Use **real numbers you measured** (minutes saved, cost, count) — the brief may only use
 numbers it is given. Lead with the viewer's pain and the payoff, not the price.
 
 End the goal with the **promoted product's** colours, so the closing card matches its landing page:
@@ -101,7 +101,7 @@ you: film or upload new footage for that slot, which answers the note.
 highlight ring and a zoom to point at what each line names. It needs only `uv`. Download it,
 check it against the checksum on GitHub, and stop if the check fails — never run an unchecked wheel:
 ```bash
-WHEEL=fluxcut_capture-0.5.7-py3-none-any.whl
+WHEEL=fluxcut_capture-0.5.8-py3-none-any.whl
 curl -fsSLO https://www.fluxcut.dev/agents/$WHEEL
 curl -fsSL https://raw.githubusercontent.com/Flux-AI-Agent/fluxcut-checksums/main/SHA256SUMS \
   | awk -v h="$(shasum -a 256 $WHEEL | cut -d' ' -f1)" -v f="$WHEEL" '$1==h && $2==f {ok=1} END {exit !ok}' \
