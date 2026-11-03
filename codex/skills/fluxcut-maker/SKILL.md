@@ -88,7 +88,7 @@ stretched to fill 1920×1080, never cropped and enlarged to zoom in. Enlarged 2�
 2026-10-05 Orca run, built from a product's 960×540 clips). Film at full size instead: `fluxcut-capture`
 records 1920×1080 itself; a desktop app the site shows no demo of is the person's to screen-record (on a Mac, ⌘⇧5) — upload the
 original file. A shot the list lacks (a pain shot,
-say): `add_slot(project, id, description, type, label?)` — it goes before the closing card and stays
+say): `add_slot(project, id, description, type, label?, after?)` — it follows the slot `after` names, else goes before the closing card, and stays
 through a re-plan; fill it like any other.
 
 **Your footage waits for review.** Footage uploaded with a key, and every AI take, waits at the
@@ -101,7 +101,7 @@ you: film or upload new footage for that slot, which answers the note.
 highlight ring and a zoom to point at what each line names. It needs only `uv`. Download it,
 check it against the checksum on GitHub, and stop if the check fails — never run an unchecked wheel:
 ```bash
-WHEEL=fluxcut_capture-0.5.8-py3-none-any.whl
+WHEEL=fluxcut_capture-0.5.9-py3-none-any.whl
 curl -fsSLO https://www.fluxcut.dev/agents/$WHEEL
 curl -fsSL https://raw.githubusercontent.com/Flux-AI-Agent/fluxcut-checksums/main/SHA256SUMS \
   | awk -v h="$(shasum -a 256 $WHEEL | cut -d' ' -f1)" -v f="$WHEEL" '$1==h && $2==f {ok=1} END {exit !ok}' \
@@ -187,6 +187,8 @@ person to sign out on the site — that ends the session for good.
   Record on the page, do the steps and Stop; no install.
 
 ## Fixing a gate yourself
+- `edit_lines(project, {seg: text, …})` — several lines in one call and one run; a line that does not fit comes back
+  in `refused`, the others stand. Prefer it to repeated `edit_line`.
 - `edit_line(project, seg, text)` — when you know the words. Write within the segment's `fits` in the script
   packet — [fewest, most] words, counted at the chosen voice's own pace. A take may run past its hold by the
   lesser of 2 s and 15 % (the shot holds its last frame); one longer still sends the line back to the writer, a
