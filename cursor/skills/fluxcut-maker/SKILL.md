@@ -205,7 +205,8 @@ person to sign out on the site — that ends the session for good.
   a shorter `fixed_duration_sec` cuts it; `elastic` is for stills. A still is held still; `motion: push` or `pull`
   moves it. The opener and the closing card carry no caption.
 - `send_back(project, node, hash, note, seg?)` — when you want new ideas; `hash` is the packet's. Make
-  the note concrete ("name the pain in the first line", not "better").
+  the note concrete ("name the pain in the first line", not "better"). Not the thumbnail in a dual-agent project:
+  the reviewer picks the best of its one round and the video runs on; another round is the person's.
 
 ## The person's instructions
 The person can type instructions to the agents on the project page ("film the home page's tabs as one clip for
