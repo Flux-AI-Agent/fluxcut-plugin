@@ -73,8 +73,6 @@ The resources packet lists slots (`id`, `description`, `required`). Fill each re
 - `upload_footage(project, slot, url=…)` — an https link on a public host to a screen recording
   (.mp4/.mov/.webm, 6–20 s) or a screenshot (.png/.jpg). `data_base64` + `filename` only for a file
   of a few KB: every byte of it passes through your own output.
-- `request_ai_footage(project, slots, medium="image" | "video", note)` — generated stills or short clips
-  for a mood shot (the hook's feeling, a metaphor) — never in place of the product's own screens.
 - **The product out of reach** (a desktop app, a screen behind sign-in): its own site often shows it at work
   in demo clips and screenshots. Film those with `fluxcut-capture` — scroll to the clip and `play` it (a `hold`
   freezes a video on one frame); a card that opens its demo in a pop-up: click it, then `play` (no zoom: a zoom
@@ -91,7 +89,7 @@ original file. A shot the list lacks (a pain shot,
 say): `add_slot(project, id, description, type, label?, after?)` — it follows the slot `after` names, else goes before the closing card, and stays
 through a re-plan; fill it like any other.
 
-**Your footage waits for review.** Footage uploaded with a key, and every AI take, waits at the
+**Your footage waits for review.** Footage uploaded with a key waits at the
 `resources` gate before anything is made from it; the reviewer judges each slot on its own (the
 person's own uploads count as approved). A send-back on a slot regenerates nothing — its note is for
 you: film or upload new footage for that slot, which answers the note.
