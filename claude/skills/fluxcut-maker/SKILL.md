@@ -39,9 +39,10 @@ the final video waits for the person (`idle`) or an escalation stops the project
    - `escalated` — **stop and tell the person**, quoting `escalations`. No key can approve an escalated
      gate. When the cause is yours to fix — usually a line too long for its hold — fix it with `edit_line`:
      the new line replaces the escalated content. Tell the person either way.
+   - `needs_footage` — the video waits for the shots `footage_needed` names: nothing past the footage
+     list is made until every required shot is filled. Film them (below), upload, and wait again.
    - `idle` — nothing runs, nothing waits: the final video is made and waits for the person to watch
-     and publish. You are done: report and stop. (An empty slot never makes a project idle — it plays as
-     a placeholder card until filled, and blocks publish.)
+     and publish. You are done: report and stop.
    - `error` — read `run.error`. A passing fault (a timeout, a vendor outage) or one you fixed: `start_run(project)`
      once, then `wait_for_gate`. The same error twice, or one you cannot fix: stop and report it.
    - `published` — done: `download_links(project)`.
