@@ -8,6 +8,10 @@ One install adds three things:
 - the `fluxcut-maker` skill, which tells the agent how to make the video
 - a five-minute tool timeout, so one wait can hold for four minutes instead of stopping at sixty seconds
 
+When the final video is ready, the maker also supplies a YouTube delivery pack by default: title options,
+full and short descriptions, chapters calculated from the approved timeline, hashtags, tags, and video
+and thumbnail links or paths. This changes no approved content and never publishes the video.
+
 ## Your key
 
 Make a maker key at [Settings → Agent keys](https://www.fluxcut.dev/settings/keys). Then, in the terminal you start your agent from:

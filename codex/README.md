@@ -8,7 +8,7 @@ Make a maker key at https://www.fluxcut.dev/settings/keys. In the terminal you s
 codex plugin marketplace add Flux-AI-Agent/fluxcut-plugin && codex plugin add fluxcut@fluxcut
 ```
 
-Start a new task and ask Codex to use the fluxcut-maker skill. You approve each step, and you publish. The reviewer skill is a second agent, set up from https://www.fluxcut.dev/connect.
+Start a new task and ask Codex to use the fluxcut-maker skill. You approve each step, and you publish. The reviewer skill is a second agent, set up from https://www.fluxcut.dev/connect. When the video is ready, the maker supplies YouTube title options, descriptions, timeline-based chapters, hashtags, tags, and video and thumbnail links or paths by default.
 
 ## What it runs, fetches and sends
 

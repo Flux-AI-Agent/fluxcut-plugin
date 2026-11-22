@@ -12,7 +12,7 @@ Then, in Claude Code, run `/plugin configure fluxcut@fluxcut` and paste the key.
 
 Start a new session and ask Claude Code to use the fluxcut-maker skill. If you set Fluxcut up by hand before, run `claude mcp remove fluxcut` first.
 
-You approve each step, and you publish. The reviewer skill is a second agent, set up from https://www.fluxcut.dev/connect.
+You approve each step, and you publish. The reviewer skill is a second agent, set up from https://www.fluxcut.dev/connect. When the video is ready, the maker supplies YouTube title options, descriptions, timeline-based chapters, hashtags, tags, and video and thumbnail links or paths by default.
 
 ## What it runs, fetches and sends
 
