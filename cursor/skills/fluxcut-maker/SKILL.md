@@ -42,10 +42,10 @@ the final video waits for the person (`idle`) or an escalation stops the project
    - `needs_footage` — the video waits for the shots `footage_needed` names: nothing past the footage
      list is made until every required shot is filled. Film them (below), upload, and wait again.
    - `idle` — nothing runs, nothing waits: the final video is made and waits for the person to watch
-     and publish. Create the delivery pack below, then report and stop.
+     and publish. You are done: report and stop.
    - `error` — read `run.error`. A passing fault (a timeout, a vendor outage) or one you fixed: `start_run(project)`
      once, then `wait_for_gate`. The same error twice, or one you cannot fix: stop and report it.
-   - `published` — done: `download_links(project)`, then supply the delivery pack if you have not already.
+   - `published` — done: `download_links(project)`.
 4. Every edit, upload, approval and send-back starts the next run itself.
 
 ## The goal (what the brief is built from)
@@ -226,30 +226,6 @@ by itself, but when it comes back without doing what the note asks, **the fix is
 with `edit_line` / `edit_brief` / `set_timeline`; a reviewer cannot edit, so waiting deadlocks. Do
 what the note asks — no more — and say what you changed. If you disagree, keep the content and tell
 the person why; don't loop.
-
-## The delivery pack (default)
-When the final video reaches `idle` or `published`, supply a YouTube-ready delivery pack unless the person
-asks for a different platform or deliverable. Base it on the final approved brief, script, timeline and
-status, not the original goal alone. It starts no run and changes no approved content.
-
-- **Titles:** five accurate options with one recommendation; aim for at most 70 characters and never
-  exceed YouTube's 100-character limit. Do not invent results, numbers or claims.
-- **Descriptions:** a full ready-to-paste description and a short alternative. Summarize the actual video,
-  link only to the product and official pages named in the goal or verified during the work, and disclose
-  material demo limitations rather than implying an integration or automation ran when it did not.
-- **Chapters:** read the final timeline packet and accumulate the segments' `sec` values in order. Start at
-  `0:00`, floor each chapter start to a whole second, use `M:SS`, and check the last chapter against the
-  final master length. Never use the target duration or guessed timestamps. Merge adjacent segments into
-  meaningful chapters of at least 10 seconds; provide at least three ascending chapters when the video is
-  long enough, otherwise omit chapters.
-- **Discovery:** three to five relevant hashtags and 10–15 search tags, with at most 500 characters of tags.
-- **Assets:** the final video and selected thumbnail links or local paths. If the cover was corrected
-  locally, also export and inspect a 1280×720 PNG under 2 MB named `youtube-thumbnail.png`; never claim
-  the standalone Fluxcut thumbnail changed unless it actually did.
-
-When a filesystem is available, save the copy as `youtube-metadata.txt` beside the downloaded master.
-Include the complete pack and asset locations in the final response. Publication and upload remain the
-person's actions; never publish or upload on their behalf.
 
 ## Don'ts
 - Don't invent facts, numbers or quotes for the brief or the script.

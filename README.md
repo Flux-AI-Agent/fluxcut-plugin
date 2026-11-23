@@ -2,15 +2,11 @@
 
 Fluxcut makes a short product video from a goal. These plugins let a coding agent make one for you: the agent writes, films and drives each step, and you approve each step and publish.
 
-One install adds three things:
+The Claude Code, Codex and Cursor packages each add three things:
 
 - the Fluxcut MCP server, `https://www.fluxcut.dev/mcp`
 - the `fluxcut-maker` skill, which tells the agent how to make the video
 - a five-minute tool timeout, so one wait can hold for four minutes instead of stopping at sixty seconds
-
-When the final video is ready, the maker also supplies a YouTube delivery pack by default: title options,
-full and short descriptions, chapters calculated from the approved timeline, hashtags, tags, and video
-and thumbnail links or paths. This changes no approved content and never publishes the video.
 
 ## Your key
 
@@ -41,6 +37,12 @@ codex plugin marketplace add Flux-AI-Agent/fluxcut-plugin && codex plugin add fl
 
 Codex reads `FLUXCUT_KEY` when it starts. Start a new task after installing.
 
+## Orca
+
+Install **Fluxcut** from Orca's plugin directory, or run `orca plugin install Flux-AI-Agent/fluxcut-plugin`. Then open a workspace and run **Fluxcut: Set up Claude Code** or **Fluxcut: Set up Codex** from the command palette.
+
+The command opens a dedicated terminal and runs the same installer shown above. Orca asks you to approve workspace reading and terminal access for this adapter. It never reads or stores `FLUXCUT_KEY`; finish the key setup for your agent as described above. Orca does not yet install MCP servers or agent skills directly, so running a setup command is necessary.
+
 ## Cursor
 
 In Cursor, open the marketplace and install **Fluxcut**. Before it is listed there, clone this repo and copy `cursor/` to `~/.cursor/plugins/local/fluxcut`, then run **Developer: Reload Window**. Cursor reads `FLUXCUT_KEY` from the environment it starts in. Its waits use the server's default of 45 seconds.
@@ -56,6 +58,7 @@ Point it at `https://www.fluxcut.dev/mcp` with the header `Authorization: Bearer
 | `claude/` | the Claude Code plugin; `.claude-plugin/marketplace.json` lists it |
 | `codex/` | the Codex plugin; `.agents/plugins/marketplace.json` lists it |
 | `cursor/` | the Cursor plugin; `.cursor-plugin/marketplace.json` lists it |
+| `orca-plugin.json`, `orca/` | the Orca adapter and its worker tests |
 | `server.json` | the entry for the MCP registry |
 | `glama.json` | the maintainer, for Glama |
 

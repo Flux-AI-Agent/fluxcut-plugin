@@ -6,7 +6,7 @@ Make a maker key at https://www.fluxcut.dev/settings/keys and set `FLUXCUT_KEY` 
 
 Cursor has no per-server timeout setting, so this plugin uses the server's default wait of 45 seconds. Waits are shorter than with the Claude Code or Codex plugin, but none is cut off.
 
-You approve each step, and you publish. The reviewer skill is a second agent, set up from https://www.fluxcut.dev/connect. When the video is ready, the maker supplies YouTube title options, descriptions, timeline-based chapters, hashtags, tags, and video and thumbnail links or paths by default.
+You approve each step, and you publish. The reviewer skill is a second agent, set up from https://www.fluxcut.dev/connect.
 
 ## What it runs, fetches and sends
 

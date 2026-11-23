@@ -1,0 +1,44 @@
+{
+  "$schema": "https://raw.githubusercontent.com/stablyai/orca/main/docs/schemas/plugins/orca-plugin.v2.schema.json",
+  "manifestVersion": 2,
+  "execution": "trusted-worker",
+  "id": "fluxcut",
+  "name": "Fluxcut",
+  "description": "Sets up Fluxcut's MCP server and maker skill for Claude Code or Codex in a dedicated Orca terminal. Your agent drives the video steps; you approve them and publish.",
+  "version": "1.46.2",
+  "author": {
+    "name": "Fluxcut",
+    "url": "https://www.fluxcut.dev"
+  },
+  "repository": "https://github.com/Flux-AI-Agent/fluxcut-plugin",
+  "license": "MIT",
+  "homepage": "https://www.fluxcut.dev/connect",
+  "icon": "assets/icon.png",
+  "engines": {
+    "orca": ">=1.4.247"
+  },
+  "pluginApi": 1,
+  "main": "orca/main.ts",
+  "contributes": {
+    "commands": [
+      {
+        "id": "fluxcut.setupClaude",
+        "title": "Fluxcut: Set up Claude Code",
+        "when": "workspace"
+      },
+      {
+        "id": "fluxcut.setupCodex",
+        "title": "Fluxcut: Set up Codex",
+        "when": "workspace"
+      }
+    ]
+  },
+  "capabilities": [
+    {
+      "kind": "workspace:read"
+    },
+    {
+      "kind": "terminal:send"
+    }
+  ]
+}
